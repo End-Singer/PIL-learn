@@ -1,0 +1,16 @@
+# 图像处理模块 pip install pillow
+from PIL import Image  # from 包 import 模块
+from PIL import ImageDraw, ImageFont, ImageFilter
+
+# 一般操作
+img = Image.open('D:\End_Singer\Downloads\girl.jpg')  # 打开
+# img.show()  # 展示
+img.save('D:\End_Singer\Pictures\Saved Pictures\girl.png')  # 保存到不同地址，不同格式
+print(img.mode)  # 获取图片模式
+print(img.size)  # 获取图片大小
+
+# 给图片添加文字
+draw = ImageDraw.Draw(img)
+Black_font = ImageFont.truetype('C:\Windows\Fonts\LHANDW.TTF', 80)
+draw.text((350, 0), 'Girl', fill='#e6b422', font=Black_font)
+img.show()
