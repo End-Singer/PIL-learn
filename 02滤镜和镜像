@@ -1,0 +1,17 @@
+from PIL import Image, ImageFilter
+
+im1 = Image.open('图片地址')
+im1.filter(ImageFilter.BLUR).show()  # 模糊
+im1.filter(ImageFilter.CONTOUR).show()  # 轮廓
+im1.filter(ImageFilter.EDGE_ENHANCE).show()  # 边缘加强
+im1.filter(ImageFilter.EDGE_ENHANCE_MORE).show()  # 边缘加强(阈值更大)
+im1.filter(ImageFilter.EMBOSS).show()  # 浮雕滤镜
+im1.filter(ImageFilter.FIND_EDGES).show()  # 边缘
+im1.filter(ImageFilter.SMOOTH).show()  # 平滑
+im1.filter(ImageFilter.SMOOTH_MORE).show()  # 平滑(阈值更大)
+im1.filter(ImageFilter.SHARPEN).show()  # 锐化
+im1.filter(ImageFilter.DETAIL).show()  # 细节
+im1.filter(ImageFilter.GaussianBlur).show()  # 高斯模糊
+# 镜像
+im1.transpose(Image.FLIP_LEFT_RIGHT).show()  # 左右镜像，transpose v.颠倒
+im1.transpose(Image.FLIP_TOP_BOTTOM).show()  # 上下镜像
