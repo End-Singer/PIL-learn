@@ -1,0 +1,11 @@
+# 拼接功能
+from PIL import Image, ImageDraw
+im1 = Image.open('D:\End_Singer\Pictures\Saved Pictures\恋恋.png')
+im2 = Image.open('D:\End_Singer\Pictures\Saved Pictures\girl.png')
+print(im1.size)
+# Image.new('RGB/RGBA', (w, h), (0-255, 0-255, 0-255))
+newim = Image.new('RGB', (3472, 2456), (255, 255, 255))  # 新建空白图片
+newim.paste(im1, (0, 0))
+im2 = im2.resize(im1.size)
+newim.paste(im2, (1736, 0))
+newim.show()
