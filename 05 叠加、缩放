@@ -1,0 +1,12 @@
+# 图片叠加
+from PIL import Image
+im1 = Image.open('D:\End_Singer\Downloads\太空.jpg')
+im2 = Image.open('D:\End_Singer\Downloads\girl.jpg')
+print(im1.mode, im2.mode)  # 图片需要模式一样，大小一样，格式一样
+im1 = im1.resize(im2.size)
+new = Image.blend(im1, im2, 0.7)  # alpha控制的是im2的透明度
+new.show()
+print(new.size)
+# 图片缩放
+new.thumbnail((400, 400))  # 根据缩放比例更大的边，等比例缩放
+new.show()
